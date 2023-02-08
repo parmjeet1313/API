@@ -9,11 +9,24 @@ import Navbar from "./Navbar";
 
 import BestSeller from "./BestSeller";
 import FeaturedProducts from "./FeaturedProducts";
+import Carts from "./Carts";
+// import { ApiContext, ContextExample} from "./Provider/UseContext";
+import { useState } from "react";
+import ContextExample from "./Provider/ContextExample";
+import { ApiContext } from "./Provider/UseContext";
+// import ContextExample from "./Provider/ContextExample";
+
 
 function App() {
+
+  const [cart,setCart]=useState([]);
+
   return (
     <div className="">
-      <Navbar />
+      {/* <Navbar /> */}
+      {/* <Carts/> */}
+      {/* <ApiContext.Provider value={[cart,setCart]}> */}
+
 
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -25,6 +38,12 @@ function App() {
         <Route path="/bestseller" element={<BestSeller />}></Route>
         <Route path="/featuredproducts" element={<FeaturedProducts />}></Route>
       </Routes>
+
+
+        {/* <ContextExample/>
+      </ApiContext.Provider> */}
+
+
     </div>
   );
 }
